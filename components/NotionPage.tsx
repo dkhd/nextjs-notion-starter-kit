@@ -17,8 +17,8 @@ import { NotionRenderer } from 'react-notion-x'
 import {
   getBlockTitle,
   getPageProperty,
-  formatDate,
-  getPageBreadcrumbs
+  formatDate
+  // getPageBreadcrumbs
 } from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
 import { mapImageUrl } from 'lib/map-image-url'
@@ -200,7 +200,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const isBlogPost =
     block?.type === 'page' && block?.parent_table === 'collection'
 
-  const showTableOfContents = !!isBlogPost
+  // const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
   const pageAside = React.useMemo(
