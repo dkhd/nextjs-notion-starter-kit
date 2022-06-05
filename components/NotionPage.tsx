@@ -14,7 +14,12 @@ import TweetEmbed from 'react-tweet-embed'
 import { NotionRenderer } from 'react-notion-x'
 
 // utils
-import { getBlockTitle, getPageProperty, formatDate } from 'notion-utils'
+import {
+  getBlockTitle,
+  getPageProperty,
+  formatDate,
+  getPageBreadcrumbs
+} from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
 import { mapImageUrl } from 'lib/map-image-url'
 import { searchNotion } from 'lib/search-notion'
@@ -29,7 +34,7 @@ import { PageHead } from './PageHead'
 import { PageAside } from './PageAside'
 import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
-import { GitHubShareButton } from './GitHubShareButton'
+// import { GitHubShareButton } from './GitHubShareButton'
 
 import styles from './styles.module.css'
 
@@ -274,7 +279,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         fullPage={!isLiteMode}
         previewImages={!!recordMap.preview_images}
         showCollectionViewDropdown={false}
-        showTableOfContents={showTableOfContents}
+        // showTableOfContents={showTableOfContents}
         minTableOfContentsItems={minTableOfContentsItems}
         defaultPageIcon={config.defaultPageIcon}
         defaultPageCover={config.defaultPageCover}
@@ -286,7 +291,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         footer={footer}
       />
 
-      <GitHubShareButton />
+      {/* <GitHubShareButton /> */}
     </>
   )
 }

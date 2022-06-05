@@ -3,8 +3,8 @@ import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
-import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
-import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
+import { BsPower } from '@react-icons/all-files/bs/BsPower'
+import { FaEnvelope } from '@react-icons/all-files/fa/FaEnvelope'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 
@@ -38,7 +38,7 @@ export const FooterImpl: React.FC = () => {
       <div className={styles.settings}>
         {hasMounted && (
           <a
-            className={styles.toggleDarkMode}
+            className={styles.toggleDarkMode + ' social-footer'}
             href='#'
             role='button'
             onClick={onToggleDarkMode}
@@ -52,7 +52,7 @@ export const FooterImpl: React.FC = () => {
       <div className={styles.social}>
         {config.twitter && (
           <a
-            className={styles.twitter}
+            className={styles.twitter + ' social-footer'}
             href={`https://twitter.com/${config.twitter}`}
             title={`Twitter @${config.twitter}`}
             target='_blank'
@@ -64,7 +64,7 @@ export const FooterImpl: React.FC = () => {
 
         {config.zhihu && (
           <a
-            className={styles.zhihu}
+            className={styles.zhihu + ' social-footer'}
             href={`https://zhihu.com/people/${config.zhihu}`}
             title={`Zhihu @${config.zhihu}`}
             target='_blank'
@@ -76,7 +76,7 @@ export const FooterImpl: React.FC = () => {
 
         {config.github && (
           <a
-            className={styles.github}
+            className={styles.github + ' social-footer'}
             href={`https://github.com/${config.github}`}
             title={`GitHub @${config.github}`}
             target='_blank'
@@ -88,7 +88,7 @@ export const FooterImpl: React.FC = () => {
 
         {config.linkedin && (
           <a
-            className={styles.linkedin}
+            className={styles.linkedin + ' social-footer'}
             href={`https://www.linkedin.com/in/${config.linkedin}`}
             title={`LinkedIn ${config.author}`}
             target='_blank'
@@ -100,25 +100,25 @@ export const FooterImpl: React.FC = () => {
 
         {config.newsletter && (
           <a
-            className={styles.newsletter}
+            className={styles.newsletter + ' social-footer'}
             href={`${config.newsletter}`}
-            title={`Newsletter ${config.author}`}
+            title={`Powered by ${config.author}`}
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FaEnvelopeOpenText />
+            <BsPower />
           </a>
         )}
 
         {config.youtube && (
           <a
-            className={styles.youtube}
-            href={`https://www.youtube.com/${config.youtube}`}
-            title={`YouTube ${config.author}`}
+            className={styles.youtube + ' social-footer'}
+            href={`mailto:${config.youtube}`}
+            title={`Email me at: ${config.youtube}`}
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FaYoutube />
+            <FaEnvelope />
           </a>
         )}
       </div>

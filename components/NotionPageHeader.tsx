@@ -4,6 +4,7 @@ import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { Header, Breadcrumbs, Search, useNotionContext } from 'react-notion-x'
 import * as types from 'notion-types'
+import * as config from 'lib/config'
 
 import { useDarkMode } from 'lib/use-dark-mode'
 import { navigationStyle, navigationLinks, isSearchEnabled } from 'lib/config'
@@ -44,7 +45,11 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
+        {/* <Breadcrumbs block={block} rootOnly={true} /> */}
+        <a href='/' className={cs(styles.navLink, 'breadcrumb', 'button')}>
+          {config.name}
+        </a>
+        <div style={{ flexGrow: 1 }}></div>
 
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
