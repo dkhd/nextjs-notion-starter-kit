@@ -31,7 +31,7 @@ import * as config from 'lib/config'
 import { Loading } from './Loading'
 import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
-import { PageAside } from './PageAside'
+// import { PageAside } from './PageAside'
 import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
 // import { GitHubShareButton } from './GitHubShareButton'
@@ -203,12 +203,12 @@ export const NotionPage: React.FC<types.PageProps> = ({
   // const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
-  const pageAside = React.useMemo(
-    () => (
-      <PageAside block={block} recordMap={recordMap} isBlogPost={isBlogPost} />
-    ),
-    [block, recordMap, isBlogPost]
-  )
+  // const pageAside = React.useMemo(
+  //   () => (
+  //     <PageAside block={block} recordMap={recordMap} isBlogPost={isBlogPost} />
+  //   ),
+  //   [block, recordMap, isBlogPost]
+  // )
 
   const footer = React.useMemo(() => <Footer />, [])
 
@@ -287,7 +287,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
-        pageAside={pageAside}
+        // pageAside={pageAside}
         footer={footer}
       />
 
