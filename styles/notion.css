@@ -178,10 +178,10 @@
     display: none;
   }
 
-  .social-footer {
-    font-size: 1.3em !important;
-  }
   
+}
+.social-footer {
+  font-size: 1.2em !important;
 }
 .notion-collection-header {
   display: none;
